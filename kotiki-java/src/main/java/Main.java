@@ -10,9 +10,7 @@ public class Main {
 
     static {
         try {
-            ourSessionFactory = new Configuration()
-                    .configure("hibernate.cfg.xml")
-                    .buildSessionFactory();
+            ourSessionFactory = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Cat.class).addAnnotatedClass(Owner.class).buildSessionFactory();
         } catch (Throwable ex) {
             throw new ExceptionInInitializerError(ex);
         }
@@ -25,9 +23,9 @@ public class Main {
     public static void main(final String[] args) throws Exception {
         final Session session = getSession();
         try {
-            System.out.println("querying..");
-            System.out.println("Status" + session.getTransaction().getStatus());
             session.beginTransaction();
+            System.out.println("querying..");
+
             session.getTransaction().commit();
         } finally {
             session.close();
