@@ -8,12 +8,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="banks-java" />
-        <module name="kotiki-java" />
+        <module name="controller" />
+        <module name="dao" />
+        <module name="service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="banks-java" target="16" />
+      <module name="controller" target="18" />
+      <module name="dao" target="18" />
       <module name="kotiki-java" target="18" />
+      <module name="service" target="18" />
     </bytecodeTargetLevel>
   </component>
 </project>

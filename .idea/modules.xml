@@ -3,8 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/banks-java/banks-java.iml" filepath="$PROJECT_DIR$/banks-java/banks-java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kotiki-java/controller/controller.iml" filepath="$PROJECT_DIR$/kotiki-java/controller/controller.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kotiki-java/dao/dao.iml" filepath="$PROJECT_DIR$/kotiki-java/dao/dao.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/ilvi89.iml" filepath="$PROJECT_DIR$/.idea/ilvi89.iml" />
       <module fileurl="file://$PROJECT_DIR$/kotiki-java/kotiki-java.iml" filepath="$PROJECT_DIR$/kotiki-java/kotiki-java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kotiki-java/service/service.iml" filepath="$PROJECT_DIR$/kotiki-java/service/service.iml" />
     </modules>
   </component>
 </project>
