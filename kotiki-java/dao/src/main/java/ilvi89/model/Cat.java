@@ -1,4 +1,4 @@
-package model;
+package ilvi89.model;
 
 import lombok.*;
 import org.hibernate.Hibernate;
@@ -8,36 +8,44 @@ import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
-
-
 @Getter
 @Setter
 @ToString
 @RequiredArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Entity
-@Table(name = "owners")
-public class Owner {
+@Table(name = "cats")
+public class Cat {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Setter(AccessLevel.PROTECTED)
     private Long id;
 
     @NonNull
+    @Builder.ObtainVia
     private String name;
 
     private Date birth;
 
-    @OneToMany
+    private String race;
+
+    @Enumerated(EnumType.STRING)
+    private CatColor color;
+
+    @NonNull
+    private Long ownerId;
+
+    @ManyToMany
     @ToString.Exclude
-    private List<Cat> cats;
+    private List<Cat> friends;
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
-        Owner owner = (Owner) o;
-        return id != null && Objects.equals(id, owner.id);
+        Cat cat = (Cat) o;
+        return id != null && Objects.equals(id, cat.id);
     }
 
     @Override

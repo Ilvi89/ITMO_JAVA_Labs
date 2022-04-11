@@ -1,4 +1,4 @@
-import dao.OwnerDao;
+import ilvi89.dao.OwnerDao;
 
 public class OwnerTest {
     public static void main(String[] args) {

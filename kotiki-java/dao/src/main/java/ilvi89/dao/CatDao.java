@@ -1,9 +1,6 @@
-package dao;
+package ilvi89.dao;
 
-import model.Cat;
-import model.Owner;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
+import ilvi89.model.Cat;
 
 import java.util.List;
 

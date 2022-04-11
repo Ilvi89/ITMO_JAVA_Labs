@@ -1,9 +1,10 @@
-import com.sun.istack.NotNull;
-import dao.OwnerDao;
-import model.Cat;
-import model.Owner;
+package ilvi89;
 
-import java.util.Calendar;
+import com.sun.istack.NotNull;
+import ilvi89.dao.OwnerDao;
+import ilvi89.model.Cat;
+import ilvi89.model.Owner;
+
 import java.util.List;
 
 public class OwnerService{

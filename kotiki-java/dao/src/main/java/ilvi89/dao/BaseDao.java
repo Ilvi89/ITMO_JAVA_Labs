@@ -1,7 +1,7 @@
-package dao;
+package ilvi89.dao;
 
-import model.Cat;
-import model.Owner;
+import ilvi89.model.Cat;
+import ilvi89.model.Owner;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;

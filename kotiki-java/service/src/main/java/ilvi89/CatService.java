@@ -1,7 +1,8 @@
+package ilvi89;
+
 import com.sun.istack.NotNull;
-import dao.CatDao;
-import model.Cat;
-import model.CatColor;
+import ilvi89.dao.CatDao;
+import ilvi89.model.Cat;
 
 import java.util.List;
 
