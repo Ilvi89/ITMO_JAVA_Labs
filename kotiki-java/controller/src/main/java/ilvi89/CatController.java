@@ -13,17 +13,17 @@ public class CatController {
     private static final CatService catService = new CatService(new CatDao());
     private static final OwnerService ownerService = new OwnerService(new OwnerDao());
 
-    @GetMapping("/")
+    @GetMapping("/cats")
     public String getAll() {
         return "Hello! \n" + catService.findAll();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/cats/{id}")
     public String getById(@PathVariable long id) {
         return "Cat page:\n" + catService.findById(id);
     }
 
-    @PostMapping("/")
+    @PostMapping("/cats")
     public String create(@RequestParam String name, @RequestParam Long ownerId) {
         if (ownerService.findById(ownerId) == null) {
             // Todo: return bed status and response

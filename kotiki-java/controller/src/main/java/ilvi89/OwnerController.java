@@ -12,17 +12,17 @@ public class OwnerController {
     private static final CatService catService = new CatService(new CatDao());
     private static final OwnerService ownerService = new OwnerService(new OwnerDao());
 
-    @GetMapping("/")
+    @GetMapping("/owners")
     public String getAll() {
         return "Hello! \n" + ownerService.findAll();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/owners/{id}")
     public String getById(@PathVariable long id) {
         return "Owner page:\n" + ownerService.findById(id);
     }
 
-    @PostMapping("/")
+    @PostMapping("/owners/")
     public String create(@RequestParam String name) {
         var owner = new Owner(name);
 
